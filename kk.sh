@@ -128,7 +128,7 @@ service iptables stop
 service mysqld start
 }
 removeTemp() {
-echo -n -t 5 "完成安装，是否删除临时文件 y/n [n] :"
+echo -n "完成安装，是否删除临时文件 y/n [n] :"
 read ANS
 case $ANS in
 y|Y|yes|Yes)
