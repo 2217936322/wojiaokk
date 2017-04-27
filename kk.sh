@@ -93,12 +93,12 @@ wget http://7xtbzk.com1.z0.glb.clouddn.com/mysql.tar.gz
 wget http://7xtbzk.com1.z0.glb.clouddn.com/geoip.tar.gz
 wget http://7xtbzk.com1.z0.glb.clouddn.com/lib.tar.gz
 elif (($networkState==2)); then
-cd ~
-else
 wget https://raw.githubusercontent.com/2217936322/wojiaokk/master/server.tar.gz
 wget https://raw.githubusercontent.com/2217936322/wojiaokk/master/mysql.tar.gz
 wget https://raw.githubusercontent.com/2217936322/wojiaokk/master/lib.tar.gz
 wget https://raw.githubusercontent.com/2217936322/wojiaokk/master/geoip.tar.gz
+else
+cd /
 fi
 tar -zvxf server.tar.gz
 tar -zvxf lib.tar.gz
