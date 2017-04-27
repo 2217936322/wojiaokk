@@ -1,11 +1,11 @@
 #!/bin/bash
 install(){
 echo "我叫KK最牛逼 CentOS7.X版本正在内测中!"
-read -p "输入系统版本，例如CentOS 5.11，输入5，然后回车：" versionNumber
+read -p "输入系统版本，例如CentOS 5.11，输入5，然后回车 :" versionNumber
 echo "1 :国内服务器 七牛下载"
 echo "2 :国外服务器 GitHub下载"
 echo "3 :跟目录已经存在服务端"
-read -p "请选择[默认3]" networkState
+read -p "请选择[默认3] :" networkState
 if(($versionNumber==5)); then
 installSupportLibOnCentOS5
 elif (($versionNumber==6)); then
@@ -74,13 +74,13 @@ service mysqld stop
 }
 installDOF() {
 getIP
-echo -n "${IP} 是否是你的外网IP？(如果不是你的外网IP或者出现两条IP地址，请键入 n 自行输入) y/n [n] ?"
+echo -n "${IP} 是否是你的外网IP？(如果不是你的外网IP或者出现两条IP地址，请键入 n 自行输入) y/n [n] :"
 read ans
 case $ans in
 y|Y|yes|Yes)
 ;;
 n|N|no|No)
-read -p "输入你的外网IP地址，回车（确保是英文字符的点号）：" myip
+read -p "输入你的外网IP地址，回车（确保是英文字符的点号）:" myip
 IP=$myip
 ;;
 *)
@@ -128,23 +128,7 @@ service iptables stop
 service mysqld start
 }
 removeTemp() {
-echo -n -t 5 "完成安装，是否删除临时文件 y/n [n] ?"
-read ANS
-case $ANS in
-y|Y|yes|Yes)
-rm -f /geoip.tar.gz
-rm -f /lib.tar.gz
-rm -f /mysql.tar.gz
-rm -f /server.tar.gz
-;;
-n|N|no|No)
-;;
-*)
-;;
-esac
-}
-removeTemp() {
-echo -n -t 5 "完成安装，是否删除临时文件 y/n [n] ?"
+echo -n -t 5 "完成安装，是否删除临时文件 y/n [n] :"
 read ANS
 case $ANS in
 y|Y|yes|Yes)
